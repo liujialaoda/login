@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/error.css"/>
+		<script src = js/error.js"></script>
+	</head>
+	<body>
+		<main>
+			<h3>登录信息错误</h3>
+			<div>
+				<span id = "time">5</span>
+				s后返回上一个页面
+			</div>
+		</main>
+	</body>
+</html>
+<script>
+	let time = document.getElementById('time');
+	let t = setInterval(function(){
+		if(time.innerText>0){
+			time.innerText -= 1;
+		}
+		else{
+			clearInterval(t);
+			location.replace('login.html');
+		}
+	},1000)
+		
+
+</script>
